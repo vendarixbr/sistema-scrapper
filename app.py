@@ -1,7 +1,7 @@
 """Streamlit entry point for Health Lead Extractor."""
+# ============ BLOCO NOVO (adicionar no topo) ============
 import subprocess, sys, os
 
-# Instala chromium ANTES de qualquer comando Streamlit
 _marker = os.path.expanduser("~/.playwright_installed")
 if not os.path.exists(_marker):
     subprocess.run(
@@ -9,24 +9,21 @@ if not os.path.exists(_marker):
         check=True
     )
     open(_marker, "w").close()
+# =========================================================
 
-import streamlit as st  # ← streamlit vem DEPOIS da instalação
-
-st.set_page_config(...)  # ← continua sendo o 1º comando do st
-
+# ============ SEU CÓDIGO ORIGINAL (não muda nada) ========
+import streamlit as st
 import json
 import sys
-from pathlib import Path
+# ... outros imports que já tinha ...
 
-import streamlit as st
-
-# ── Page config (must be the very first st call) ─────────────────────────── #
-st.set_page_config(
-    page_title="Health Lead Extractor",
+st.set_page_config(        # ← continua aqui, do jeito que estava
+    page_title="...",
     page_icon="🏥",
     layout="wide",
-    initial_sidebar_state="expanded",
 )
+
+# ... resto do app ...
 
 # ── Ensure project root is importable ────────────────────────────────────── #
 _ROOT = Path(__file__).parent
