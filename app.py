@@ -1,15 +1,19 @@
 """Streamlit entry point for Health Lead Extractor."""
-import subprocess, sys
-import streamlit as st  # ← precisa vir antes do @st.cache_resource
+import subprocess, sys, os
 
-@st.cache_resource
-def instalar_chromium():
+# Instala chromium ANTES de qualquer comando Streamlit
+_marker = os.path.expanduser("~/.playwright_installed")
+if not os.path.exists(_marker):
     subprocess.run(
         [sys.executable, "-m", "playwright", "install", "chromium"],
         check=True
     )
+    open(_marker, "w").close()
 
-instalar_chromium()
+import streamlit as st  # ← streamlit vem DEPOIS da instalação
+
+st.set_page_config(...)  # ← continua sendo o 1º comando do st
+
 import json
 import sys
 from pathlib import Path
