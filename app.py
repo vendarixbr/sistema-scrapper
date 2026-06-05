@@ -10,6 +10,8 @@ if not os.path.exists(_marker):
     )
     open(_marker, "w").close()
 # =========================================================
+import subprocess, sys, os
+from pathlib import Path  # ← adicionar isso
 
 # ============ SEU CÓDIGO ORIGINAL (não muda nada) ========
 import streamlit as st
