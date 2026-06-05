@@ -1,5 +1,14 @@
 """Streamlit entry point for Health Lead Extractor."""
+import subprocess, sys
 
+@st.cache_resource
+def instalar_chromium():
+    subprocess.run(
+        [sys.executable, "-m", "playwright", "install", "chromium"],
+        check=True
+    )
+
+instalar_chromium()
 import json
 import sys
 from pathlib import Path
