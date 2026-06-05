@@ -1,0 +1,145 @@
+/* =====================================================
+   Health Lead Extractor — Custom Streamlit styles
+   Primary: #00897B  (teal médico)
+   ===================================================== */
+
+/* ── Hide default Streamlit footer ─────────────────── */
+footer { visibility: hidden !important; }
+#MainMenu { visibility: hidden !important; }
+
+/* ── App background ─────────────────────────────────── */
+.stApp {
+    background: #f8fafb;
+}
+
+/* ── Sidebar ─────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: #f0f7f6 !important;
+    border-right: 1px solid #d0e8e5;
+}
+[data-testid="stSidebar"] .stMetric {
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 4px;
+}
+
+/* ── Primary button ──────────────────────────────────── */
+.stButton > button[kind="primary"] {
+    background: #00897B !important;
+    border-color: #00897B !important;
+    color: white !important;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.1s;
+}
+.stButton > button[kind="primary"]:hover {
+    background: #00796B !important;
+    transform: translateY(-1px);
+}
+
+/* ── Secondary buttons ───────────────────────────────── */
+.stButton > button {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* ── Metric cards ────────────────────────────────────── */
+[data-testid="stMetricValue"] {
+    font-size: 1.8rem !important;
+    font-weight: 700;
+    color: #00897B;
+}
+[data-testid="stMetric"] {
+    background: white;
+    border: 1px solid #e8f5e9;
+    border-radius: 10px;
+    padding: 12px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+/* ── Score badges ────────────────────────────────────── */
+.badge-hot {
+    background: #FF6B35;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.badge-qualified {
+    background: #FFC107;
+    color: black;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.badge-warm {
+    background: #64B5F6;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.badge-cold {
+    background: #90A4AE;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* ── Welcome / info cards ────────────────────────────── */
+.welcome-card {
+    background: white;
+    border: 1px solid #e0f2f1;
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,.06);
+    transition: box-shadow 0.2s;
+}
+.welcome-card:hover {
+    box-shadow: 0 4px 12px rgba(0,137,123,.15);
+}
+
+/* ── Data table alternating rows ─────────────────────── */
+[data-testid="stDataFrame"] tr:nth-child(even) td {
+    background: #f8fafb !important;
+}
+
+/* ── st.container with border ────────────────────────── */
+[data-testid="stVerticalBlockBorderWrapper"] {
+    border-radius: 10px !important;
+    border-color: #d0e8e5 !important;
+}
+
+/* ── Progress bar colour ─────────────────────────────── */
+[data-testid="stProgressBar"] > div > div {
+    background: #00897B !important;
+}
+
+/* ── st.status ───────────────────────────────────────── */
+[data-testid="stStatusWidget"] {
+    border-radius: 10px;
+}
+
+/* ── Tabs ────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px 8px 0 0;
+    font-weight: 500;
+}
+.stTabs [aria-selected="true"] {
+    background: #e0f2f1 !important;
+    color: #00897B !important;
+}

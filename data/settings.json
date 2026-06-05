@@ -1,0 +1,11 @@
+{
+  "request_delay_min": 2.0,
+  "request_delay_max": 5.0,
+  "max_pages_default": 10,
+  "headless_default": true,
+  "min_score_default": 0,
+  "csv_separator": ",",
+  "output_dir": "output",
+  "custom_palavras_clinica": [],
+  "custom_titulos_profissional": []
+}
