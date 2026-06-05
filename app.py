@@ -1,5 +1,6 @@
 """Streamlit entry point for Health Lead Extractor."""
 import subprocess, sys
+import streamlit as st  # ← precisa vir antes do @st.cache_resource
 
 @st.cache_resource
 def instalar_chromium():
